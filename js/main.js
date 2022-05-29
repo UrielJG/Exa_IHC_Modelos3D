@@ -525,7 +525,7 @@ function animate() {
 	t2.textContent = yT;
 	t3.textContent = zT;
 
-	if(xM != a1 || zM != a3 || xT != a4 || yT != a5 || zT != a6){
+	if(xM != a1 || yM != a2 || zM != a3 || xT != a4 || zT != a6){
 		a1 = xM;
 		a2 = yM;
 		a3 = zM;
