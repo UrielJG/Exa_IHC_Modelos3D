@@ -609,7 +609,7 @@ recognition.interimResults = true;
 recognition.lang = "es-MX";
 	window.onload = (e) => {
 		if (validateSpeechRecognition()) {
-			// alert("¡El navegador es compatible con Speech Recocgnition API!");
+			alert("¡El navegador es compatible con Speech Recocgnition API!");
 			recognition.start();
 		}else{
 			alert("El navegador NO es compatible con Speech Recocgnition API");
@@ -623,7 +623,7 @@ recognition.lang = "es-MX";
 
         text = text.toUpperCase();		
         let arrayText = text.split(" ");        
-		// console.log(text);
+		console.log(text);
         if (e.results[0].isFinal) {
             if (validaGramatica(arrayText[0], arrayText[1], gramatica[0], gramatica[1], gramatica[2], gramatica[3], gramatica[4], gramatica[5], gramatica[6], gramatica[7], gramatica[8])) {
                 // console.log("texto: " + arrayText[0], arrayText[1]);
@@ -652,10 +652,10 @@ recognition.lang = "es-MX";
 							camera.rotation.x -= 0.5;
 						break;
 						case 'IZQUIERDA':
-							camera.rotation.y -= 0.5;
+							camera.rotation.y += 0.5;
 						break;
 						case 'DERECHA':
-							camera.rotation.y += 0.5;
+							camera.rotation.y -= 0.5;
 						break;
 					}
 				}else if(arrayText[0] == 'DETENTE'){
